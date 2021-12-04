@@ -4,7 +4,7 @@
 ## build
 
 ```
-cd src && gcc test.c -c
+gcc -fPIC -g -Wall -O2 -Wc++-compat -c ./src/test.c -o ./target/libtest.a
 ```
 
 

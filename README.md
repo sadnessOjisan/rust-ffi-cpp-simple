@@ -5,7 +5,7 @@
 ## build
 
 ```
-gcc -fPIC -c ./src/test.c -o ./target/libtest.a
+gcc -fPIC -c ./src/test.cpp -o ./target/libtest.a
 ```
 
 ```

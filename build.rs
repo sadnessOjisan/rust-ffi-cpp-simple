@@ -1,6 +1,12 @@
-use std::env;
-fn main(){
-    let project_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
-    println!("cargo:rustc-link-search={}/target/", project_dir); // the "-L" flag
-    println!("cargo:rustc-link-lib=test"); // the "-l" flag
+fn main() {
+    cc::Build::new()
+        .cpp(true)
+        .flag("-std=c++20")
+        .warnings(true)
+        .flag("-Wall")
+        .flag("-Wextra")
+        .flag("-v")
+        .flag("-g")
+        .file("./src/test.cpp")
+        .compile("libtest.a");
 }

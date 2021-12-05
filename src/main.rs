@@ -1,12 +1,12 @@
-use std::os::raw::c_int;
+use libc;
 
-extern "C"  {
+#[link(name = "test", kind = "static")]
+extern "C" {
     fn hello_world();
 }
 
-fn main(){
-    unsafe{
+fn main() {
+    unsafe {
         hello_world();
     }
 }
-

@@ -1,6 +1,9 @@
 #include <iostream>
-#include <string>
+#include"test.h"
 
-void hello_world(){
-  std::cout << "hello cpp" << std::endl;
+using namespace std;
+
+int hello_world() {
+    cout << "Hello worldddd." << endl;
+    return 0;
 }
